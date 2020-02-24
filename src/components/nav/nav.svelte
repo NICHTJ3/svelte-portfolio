@@ -1,5 +1,11 @@
 <script>
+  const navlinks = [
+    { displayName: "Home", href: "#home" },
+    { displayName: "Experience", href: "#experience" },
+    { displayName: "Awards", href: "#awards" }
+  ];
 
+  const name = "Trent Nicholson";
 </script>
 
 <style>
@@ -80,7 +86,7 @@
   class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
   id="sideNav">
   <a class="navbar-brand js-scroll-trigger" href="#page-top">
-    <span class="d-block d-lg-none">Trent Nicholson</span>
+    <span class="d-block d-lg-none">{name}</span>
     <span class="d-none d-lg-block">
       <img
         class="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -100,15 +106,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-      </li>
+      {#each navlinks as navItem}
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href={navItem.href}>
+            {navItem.displayName}
+          </a>
+        </li>
+      {/each}
     </ul>
   </div>
 </nav>
