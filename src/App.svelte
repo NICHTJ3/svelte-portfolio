@@ -1,5 +1,6 @@
 <script>
-  import Nav from "./components/nav/nav.svelte";
+  import Nav from "./components/Nav.svelte";
+  import Experience from "./components/Experience.svelte";
 </script>
 
 <style>
@@ -10,4 +11,5 @@
 
 <main>
   <Nav />
+  <Experience />
 </main>
