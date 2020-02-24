@@ -1,4 +1,6 @@
 <script>
+  import { ScrollableSection, ScrollSpy } from "@beyonk/svelte-scrollspy";
+
   import Nav from "./components/Nav.svelte";
   import Home from "./components/Home.svelte";
   import Experience from "./components/Experience.svelte";
@@ -12,10 +14,12 @@
 </style>
 
 <main>
-  <Nav />
-  <div class="container-fluid p-0">
-    <Home />
-    <Experience />
-    <Awards />
-  </div>
+  <ScrollSpy>
+    <Nav />
+    <div class="container-fluid p-0">
+      <Home />
+      <Experience />
+      <Awards />
+    </div>
+  </ScrollSpy>
 </main>
