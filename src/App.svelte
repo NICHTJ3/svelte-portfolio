@@ -1,5 +1,6 @@
 <script>
-  import Nav from "./components/nav/nav.svelte";
+  import Nav from "./components/Nav.svelte";
+  import Home from "./components/Home.svelte";
 </script>
 
 <style>
@@ -10,4 +11,7 @@
 
 <main>
   <Nav />
+  <div class="container-fluid p-0">
+    <Home />
+  </div>
 </main>
