@@ -1,4 +1,6 @@
 <script>
+  import { ScrollableSection } from "@beyonk/svelte-scrollspy";
+
   const thingsILike = ["JavaScript", "Linux", "Vim", "Web"];
   const thingsIAmDoing = [
     {
@@ -54,7 +56,7 @@
   }
 </style>
 
-<section id="home">
+<ScrollableSection id="home">
   <section
     class="resume-section p-3 p-lg-5 d-flex align-items-center"
     id="home">
@@ -80,4 +82,4 @@
       </div>
     </div>
   </section>
-</section>
+</ScrollableSection>
