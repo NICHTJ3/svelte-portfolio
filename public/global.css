@@ -30,7 +30,7 @@ h6 {
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: #d2cfc8;
 }
 
 h1 {
@@ -69,17 +69,13 @@ h3 {
   }
 }
 
+p {
+  color: #b9b3a9;
+}
+
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
-}
-
-.dev-icons {
-  font-size: 3rem;
-}
-
-.dev-icons .list-inline-item i:hover {
-  color: #add8e6;
 }
 
 section.resume-section {
@@ -92,22 +88,8 @@ section.resume-section .resume-item .resume-date {
   min-width: none;
 }
 
-.bg-primary {
-  background-color: #add8e6 !important;
-}
-
 .text-primary {
   color: #add8e6 !important;
-}
-
-a {
-  color: #add8e6;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #72bcd4;
 }
 
 a.view-source {
@@ -119,6 +101,14 @@ a.view-source:hover {
   color: #72bcd4;
 }
 
+.dev-icons {
+  font-size: 3rem;
+}
+
+.dev-icons .list-inline-item i:hover {
+  color: #181a1b;
+}
+
 img.dev-icons {
   width: 48px;
   height: 48px;
@@ -126,4 +116,7 @@ img.dev-icons {
 
 img.source-icons {
   height: 32px;
+}
+.container-fluid {
+  background-color: #181a1b !important;
 }

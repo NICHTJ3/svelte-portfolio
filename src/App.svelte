@@ -1,5 +1,5 @@
 <script>
-  import { ScrollableSection, ScrollSpy } from "@beyonk/svelte-scrollspy";
+  import { ScrollSpy } from "@beyonk/svelte-scrollspy";
 
   import Nav from "./components/Nav.svelte";
   import Home from "./components/Home.svelte";
