@@ -1,8 +1,10 @@
 <script>
+  import { SectionHeader } from "@beyonk/svelte-scrollspy";
+
   const navlinks = [
-    { displayName: "Home", href: "#home" },
-    { displayName: "Experience", href: "#experience" },
-    { displayName: "Awards", href: "#awards" }
+    { displayName: "Home", href: "#home", id: "home" },
+    { displayName: "Experience", href: "#experience", id: "experience" },
+    { displayName: "Awards", href: "#awards", id: "awards" }
   ];
 
   const name = "Trent Nicholson";
@@ -108,9 +110,11 @@
     <ul class="navbar-nav">
       {#each navlinks as navItem}
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href={navItem.href}>
-            {navItem.displayName}
-          </a>
+          <SectionHeader id={navItem.id}>
+            <a class="nav-link js-scroll-trigger" href={navItem.href}>
+              {navItem.displayName}
+            </a>
+          </SectionHeader>
         </li>
       {/each}
     </ul>
