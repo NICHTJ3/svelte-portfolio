@@ -1,5 +1,6 @@
 <script>
   import Nav from "./components/Nav.svelte";
+  import Experience from "./components/Experience.svelte";
   import Home from "./components/Home.svelte";
 </script>
 
@@ -13,5 +14,6 @@
   <Nav />
   <div class="container-fluid p-0">
     <Home />
+    <Experience />
   </div>
 </main>
