@@ -1,5 +1,5 @@
 <script>
-  import { SectionHeader } from "@beyonk/svelte-scrollspy";
+  import { activeSection } from "../store.js";
 
   const navlinks = [
     { displayName: "Home", href: "#home", id: "home" },
@@ -19,6 +19,10 @@
 
   #sideNav .navbar-toggler:focus {
     outline-color: #e8f4f8;
+  }
+
+  .active {
+    color: #72bcd4;
   }
 
   @media (min-width: 992px) {
@@ -87,7 +91,7 @@
 <nav
   class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
   id="sideNav">
-  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+  <a class="navbar-brand" href="#page-top">
     <span class="d-block d-lg-none">{name}</span>
     <span class="d-none d-lg-block">
       <img
@@ -110,11 +114,12 @@
     <ul class="navbar-nav">
       {#each navlinks as navItem}
         <li class="nav-item">
-          <SectionHeader id={navItem.id}>
-            <a class="nav-link js-scroll-trigger" href={navItem.href}>
-              {navItem.displayName}
-            </a>
-          </SectionHeader>
+          <a
+            class:active={$activeSection == navItem.id}
+            class="nav-link"
+            href={navItem.href}>
+            {navItem.displayName}
+          </a>
         </li>
       {/each}
     </ul>

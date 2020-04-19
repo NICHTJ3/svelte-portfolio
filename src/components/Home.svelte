@@ -1,5 +1,5 @@
 <script>
-  import { ScrollableSection } from "@beyonk/svelte-scrollspy";
+  import { activeSection } from "../store.js";
 
   const thingsILike = ["JavaScript", "Linux", "Vim", "Web"];
   const thingsIAmDoing = [
@@ -14,6 +14,25 @@
       icon: "fa-github"
     }
   ];
+
+  let observer = new IntersectionObserver(onIntersect, {
+    threshold: 0.5
+  });
+
+  function onIntersect([section]) {
+    if (section.isIntersecting) {
+      activeSection.set("home");
+    }
+  }
+
+  function observe(node) {
+    observer && observer.observe(node);
+    return {
+      destroy() {
+        observer && observer.unobserve(node);
+      }
+    };
+  }
 </script>
 
 <style>
@@ -56,30 +75,29 @@
   }
 </style>
 
-<ScrollableSection id="home">
-  <section
-    class="resume-section p-3 p-lg-5 d-flex align-items-center"
-    id="home">
-    <div class="w-100">
-      <h1 class="mb-0">
-        Trent
-        <span class="text-primary">Nicholson</span>
-      </h1>
-      <div class="subheading mb-3">
+<section
+  class="resume-section p-3 p-lg-5 d-flex align-items-center"
+  id="home"
+  use:observe>
+  <div class="w-100">
+    <h1 class="mb-0">
+      Trent
+      <span class="text-primary">Nicholson</span>
+    </h1>
+    <div class="subheading mb-3">
+      <br />
+      {#each thingsIAmDoing as thing}
+        {thing.position} @ {thing.place}
         <br />
-        {#each thingsIAmDoing as thing}
-          {thing.position} @ {thing.place}
-          <br />
-        {/each}
-        {thingsILike.join(', ')}
-      </div>
-      <div class="social-icons">
-        {#each socialPlatforms as socialPlatform}
-          <a href={socialPlatform.link}>
-            <i class={`fab ${socialPlatform.icon}`} />
-          </a>
-        {/each}
-      </div>
+      {/each}
+      {thingsILike.join(', ')}
     </div>
-  </section>
-</ScrollableSection>
+    <div class="social-icons">
+      {#each socialPlatforms as socialPlatform}
+        <a href={socialPlatform.link}>
+          <i class={`fab ${socialPlatform.icon}`} />
+        </a>
+      {/each}
+    </div>
+  </div>
+</section>
