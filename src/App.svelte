@@ -1,6 +1,4 @@
 <script>
-  import { ScrollSpy } from "@beyonk/svelte-scrollspy";
-
   import Nav from "./components/Nav.svelte";
   import Home from "./components/Home.svelte";
   import Experience from "./components/Experience.svelte";
