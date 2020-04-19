@@ -14,12 +14,10 @@
 </style>
 
 <main>
-  <ScrollSpy>
-    <Nav />
-    <div class="container-fluid p-0">
-      <Home />
-      <Experience />
-      <Awards />
-    </div>
-  </ScrollSpy>
+  <Nav />
+  <div class="container-fluid p-0">
+    <Home />
+    <Experience />
+    <Awards />
+  </div>
 </main>
