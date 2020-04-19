@@ -86,6 +86,20 @@
       display: block;
     }
   }
+
+  a {
+    color: #add8e6;
+  }
+
+  .bg-primary {
+    background-color: #17404d !important;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: #17404d;
+  }
 </style>
 
 <nav
