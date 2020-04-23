@@ -2,6 +2,7 @@
   import Nav from "./components/Nav.svelte";
   import Home from "./components/Home.svelte";
   import Experience from "./components/Experience.svelte";
+  import Projects from "./components/Projects.svelte";
   import Awards from "./components/Awards.svelte";
 </script>
 
@@ -17,5 +18,6 @@
     <Home />
     <Experience />
     <Awards />
+    <Projects />
   </div>
 </main>

@@ -45,7 +45,7 @@
             <i class="fa fa-trophy text-warning" />
             {award.name}
           </h4>
-          <ul class="list-inline dev-icons" />
+          <br />
           {#if award.description}
             <p>award.description</p>
           {/if}
