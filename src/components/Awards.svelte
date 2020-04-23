@@ -4,8 +4,15 @@
   const awards = [
     {
       name: "Certificate in IT level 3 & 4",
-      description: "[description here]",
-      awarded: "[date awarded here]"
+      awarded: "November 2016, June 2017"
+    },
+    {
+      name: "Excellence in Bachelor of information technology",
+      awarded: "December 2019"
+    },
+    {
+      name: "Bachelor of information technology",
+      awarded: "June 2020"
     }
   ];
 
@@ -34,7 +41,7 @@
   use:observe
   id="awards">
   <div class="w-100">
-    <h2 class="mb-3">Awards</h2>
+    <h2 class="mb-3">Awards and other things</h2>
 
     {#each awards as award}
       <div

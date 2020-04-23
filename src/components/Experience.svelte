@@ -5,6 +5,7 @@
     {
       position: "Software tester / Intern",
       company: "Abacus Bio",
+      url: "https://abacusbio.com/",
       dateFrom: "dec 2019",
       dateEnd: "febuary 2020"
     }
@@ -46,7 +47,12 @@
         class="resume-item d-flex flex-column flex-md-row
         justify-content-between mb-3">
         <div class="resume-content">
-          <h4 class="mb-0">{experience.position} · {experience.company}</h4>
+          <h4 class="mb-0">
+            {experience.position} ·
+            <a class="text-primary" href={experience.url}>
+              {experience.company}
+            </a>
+          </h4>
           <ul class="list-inline dev-icons" />
           <p />
         </div>

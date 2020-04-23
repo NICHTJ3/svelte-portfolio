@@ -10,6 +10,10 @@
   ];
   const socialPlatforms = [
     {
+      link: "https://www.linkedin.com/in/trent-nicholson-61046a191/",
+      icon: "fa-linkedin-in"
+    },
+    {
       link: "https://github.com/NICHTJ3",
       icon: "fa-github"
     }

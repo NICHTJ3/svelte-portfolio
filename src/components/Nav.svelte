@@ -4,7 +4,7 @@
   const navlinks = [
     { displayName: "Home", href: "#home", id: "home" },
     { displayName: "Experience", href: "#experience", id: "experience" },
-    { displayName: "Awards", href: "#awards", id: "awards" },
+    { displayName: "Awards And other things", href: "#awards", id: "awards" },
     { displayName: "Ongoing projects", href: "#projects", id: "projects" }
   ];
 
