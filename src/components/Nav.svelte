@@ -7,6 +7,11 @@
     { displayName: "Awards and Education ", href: "#awards", id: "awards" },
     { displayName: "Ongoing projects", href: "#projects", id: "projects" }
   ];
+  let open;
+
+  function toggleNav() {
+    open = !open;
+  }
 
   const name = "Trent Nicholson";
 </script>
@@ -118,20 +123,23 @@
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
+    on:click={toggleNav}
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" />
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div
+    class:collapse={open}
+    class="navbar-collapse"
+    id="navbarSupportedContent">
     <ul class="navbar-nav">
       {#each navlinks as navItem}
         <li class="nav-item">
           <a
             class:active={$activeSection == navItem.id}
             class="nav-link"
+            on:click={toggleNav}
             href={navItem.href}>
             {navItem.displayName}
           </a>
