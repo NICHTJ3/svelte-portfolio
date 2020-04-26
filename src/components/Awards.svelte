@@ -41,7 +41,7 @@
   use:observe
   id="awards">
   <div class="w-100">
-    <h2 class="mb-3">Awards and other things</h2>
+    <h2 class="mb-3">Awards and Education</h2>
 
     {#each awards as award}
       <div
