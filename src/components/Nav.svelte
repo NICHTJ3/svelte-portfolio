@@ -7,7 +7,7 @@
     { displayName: "Awards and Education ", href: "#awards", id: "awards" },
     { displayName: "Ongoing projects", href: "#projects", id: "projects" }
   ];
-  let open;
+  let open = false;
 
   function toggleNav() {
     open = !open;
