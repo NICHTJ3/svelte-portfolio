@@ -1,9 +1,9 @@
 <script>
   import Nav from "./components/Nav.svelte";
-  import Home from "./components/Home.svelte";
-  import Experience from "./components/Experience.svelte";
-  import Projects from "./components/Projects.svelte";
-  import Awards from "./components/Awards.svelte";
+  import Home from "./pages/Home.svelte";
+  import Experience from "./pages/Experience.svelte";
+  import Projects from "./pages/Projects.svelte";
+  import Awards from "./pages/Awards.svelte";
 </script>
 
 <style>
@@ -16,8 +16,8 @@
   <Nav />
   <div class="container-fluid p-0">
     <Home />
-    <Experience />
     <Awards />
+    <Experience />
     <Projects />
   </div>
 </main>

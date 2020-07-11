@@ -53,19 +53,6 @@ h3 {
   }
 }
 
-@media (min-width: 768px) {
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-}
-
 p {
   color: #b9b3a9;
 }
@@ -73,17 +60,6 @@ p {
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
-}
-
-section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
-  min-height: 100vh;
-}
-
-section.resume-section .resume-item .resume-date {
-  min-width: none;
 }
 
 .text-primary {

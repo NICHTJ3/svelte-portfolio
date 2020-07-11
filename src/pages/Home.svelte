@@ -1,5 +1,5 @@
 <script>
-  import { activeSection } from "../store.js";
+  import Section from "../components/Section.svelte";
 
   const thingsILike = ["JavaScript", "Linux", "Vim", "Web"];
   const thingsIAmDoing = [
@@ -18,35 +18,9 @@
       icon: "fa-github",
     },
   ];
-
-  let observer = new IntersectionObserver(onIntersect, {
-    threshold: 0.5,
-  });
-
-  function onIntersect([section]) {
-    if (section.isIntersecting) {
-      activeSection.set("home");
-    }
-  }
-
-  function observe(node) {
-    observer && observer.observe(node);
-    return {
-      destroy() {
-        observer && observer.unobserve(node);
-      },
-    };
-  }
 </script>
 
 <style>
-  #home {
-    background-image: url(/img/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   .social-icons a {
     display: inline-block;
     height: 3.5rem;
@@ -80,29 +54,24 @@
   }
 </style>
 
-<section
-  class="resume-section p-3 p-lg-5 d-flex align-items-center"
-  id="home"
-  use:observe>
-  <div class="w-100">
-    <h1 class="mb-0">
-      Trent
-      <span class="text-primary">Nicholson</span>
-    </h1>
-    <div class="subheading mb-3">
+<Section sectionId="home" center>
+  <h1 class="mb-0">
+    Trent
+    <span class="text-primary">Nicholson</span>
+  </h1>
+  <div class="subheading mb-3">
+    <br />
+    {#each thingsIAmDoing as thing}
+      {thing.position} @ {thing.place}
       <br />
-      {#each thingsIAmDoing as thing}
-        {thing.position} @ {thing.place}
-        <br />
-      {/each}
-      {thingsILike.join(', ')}
-    </div>
-    <div class="social-icons">
-      {#each socialPlatforms as socialPlatform}
-        <a href={socialPlatform.link}>
-          <i class={`fab ${socialPlatform.icon}`} />
-        </a>
-      {/each}
-    </div>
+    {/each}
+    {thingsILike.join(', ')}
   </div>
-</section>
+  <div class="social-icons">
+    {#each socialPlatforms as socialPlatform}
+      <a href={socialPlatform.link}>
+        <i class={`fab ${socialPlatform.icon}`} />
+      </a>
+    {/each}
+  </div>
+</Section>
