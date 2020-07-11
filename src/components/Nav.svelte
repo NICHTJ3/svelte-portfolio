@@ -5,12 +5,13 @@
     { displayName: "Home", href: "#home", id: "home" },
     { displayName: "Experience", href: "#experience", id: "experience" },
     { displayName: "Awards and Education ", href: "#awards", id: "awards" },
-    { displayName: "Ongoing projects", href: "#projects", id: "projects" }
+    { displayName: "Ongoing projects", href: "#projects", id: "projects" },
   ];
-  let open = false;
+
+  let closed = true;
 
   function toggleNav() {
-    open = !open;
+    closed = !closed;
   }
 
   const name = "Trent Nicholson";
@@ -130,7 +131,7 @@
     <span class="navbar-toggler-icon" />
   </button>
   <div
-    class:collapse={open}
+    class:collapse={closed}
     class="navbar-collapse"
     id="navbarSupportedContent">
     <ul class="navbar-nav">
