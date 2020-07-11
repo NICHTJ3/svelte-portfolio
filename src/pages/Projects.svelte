@@ -49,11 +49,9 @@
   <h2 class="mb-3">Ongoing Projects</h2>
 
   {#each projects as project}
-    <div
-      class="resume-item d-flex flex-column flex-md-row justify-content-between
-      mb-3">
+    <div class="resume-item d-flex flex-column justify-content-between mb-3">
       <div class="resume-content">
-        <h4 class="justify-content-space-around">
+        <h4 class="m-0">
           <span class="social-icons">
             <a href={project.source}>
               <i class="fab fa-github" />
@@ -61,7 +59,6 @@
           </span>
           <a class="text-primary link" href={project.source}>{project.name}</a>
         </h4>
-        <div class="icons" />
       </div>
       <p>{project.description}</p>
     </div>
