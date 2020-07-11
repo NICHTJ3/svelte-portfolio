@@ -95,7 +95,7 @@
   }
 
   a {
-    color: #add8e6;
+    color: white;
   }
 
   .bg-primary {
@@ -105,7 +105,7 @@
   a:hover,
   a:focus,
   a:active {
-    color: #17404d;
+    color: #f7f2ef;
   }
 </style>
 
