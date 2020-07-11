@@ -1,12 +1,6 @@
 <script>
   import { activeSection } from "../store.js";
-
-  const navlinks = [
-    { displayName: "Home", href: "#home", id: "home" },
-    { displayName: "Experience", href: "#experience", id: "experience" },
-    { displayName: "Awards and Education ", href: "#awards", id: "awards" },
-    { displayName: "Ongoing projects", href: "#projects", id: "projects" },
-  ];
+  export let navlinks;
 
   let closed = true;
 

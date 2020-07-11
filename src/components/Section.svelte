@@ -1,6 +1,6 @@
 <script>
   export let sectionId;
-  export let center;
+  export let center = false;
   import { activeSection } from "../store.js";
 
   let observer = new IntersectionObserver(onIntersect, {

@@ -28,12 +28,20 @@
     color: #fff !important;
     border-radius: 100%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.1rem;
+    margin-right: 0.5rem;
   }
 
   .social-icons a:hover {
     background-color: #add8e6;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit !important;
   }
 </style>
 
@@ -45,16 +53,17 @@
       class="resume-item d-flex flex-column flex-md-row justify-content-between
       mb-3">
       <div class="resume-content">
-        <h4 class="mb-0">
+        <h4 class="justify-content-space-around">
           <span class="social-icons">
             <a href={project.source}>
               <i class="fab fa-github" />
             </a>
           </span>
-          {project.name}
+          <a class="text-primary link" href={project.source}>{project.name}</a>
         </h4>
-        <p>{project.description}</p>
+        <div class="icons" />
       </div>
+      <p>{project.description}</p>
     </div>
   {/each}
 
