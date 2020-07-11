@@ -5,22 +5,22 @@
   const thingsIAmDoing = [
     {
       position: "Student",
-      place: "Otago Polytechnic"
-    }
+      place: "Otago Polytechnic",
+    },
   ];
   const socialPlatforms = [
     {
       link: "https://www.linkedin.com/in/trent-nicholson-61046a191/",
-      icon: "fa-linkedin-in"
+      icon: "fa-linkedin-in",
     },
     {
       link: "https://github.com/NICHTJ3",
-      icon: "fa-github"
-    }
+      icon: "fa-github",
+    },
   ];
 
   let observer = new IntersectionObserver(onIntersect, {
-    threshold: 0.5
+    threshold: 0.5,
   });
 
   function onIntersect([section]) {
@@ -34,7 +34,7 @@
     return {
       destroy() {
         observer && observer.unobserve(node);
-      }
+      },
     };
   }
 </script>

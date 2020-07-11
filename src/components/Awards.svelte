@@ -4,20 +4,20 @@
   const awards = [
     {
       name: "Certificate in IT level 3 & 4",
-      awarded: "November 2016, June 2017"
+      awarded: "November 2016, June 2017",
     },
     {
       name: "Excellence in Bachelor of information technology",
-      awarded: "December 2019"
+      awarded: "December 2019",
     },
     {
       name: "Bachelor of information technology",
-      awarded: "June 2020"
-    }
+      awarded: "June 2020",
+    },
   ];
 
   let observer = new IntersectionObserver(onIntersect, {
-    threshold: 0.5
+    threshold: 0.5,
   });
 
   function onIntersect([section]) {
@@ -31,7 +31,7 @@
     return {
       destroy() {
         observer && observer.unobserve(node);
-      }
+      },
     };
   }
 </script>

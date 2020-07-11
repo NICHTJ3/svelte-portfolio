@@ -7,19 +7,19 @@
       description: `A basic yet useful markdown previewing website
         with an embedded vim based text editor for those of us
         who don't want an extra application`,
-      source: "https://github.com/NICHTJ3/vim-markdown-renderer"
+      source: "https://github.com/NICHTJ3/vim-markdown-renderer",
     },
     {
       name: "Another social media",
       description: `The name pretty much says it
       all but this is a social media inspired by twitter
       that i am creating as a playground to try out new and interesting things.`,
-      source: "https://github.com/NICHTJ3/AnotherSocialMedia"
-    }
+      source: "https://github.com/NICHTJ3/AnotherSocialMedia",
+    },
   ];
 
   let observer = new IntersectionObserver(onIntersect, {
-    threshold: 0.8
+    threshold: 0.8,
   });
 
   function onIntersect([section]) {
@@ -33,7 +33,7 @@
     return {
       destroy() {
         observer && observer.unobserve(node);
-      }
+      },
     };
   }
 </script>
