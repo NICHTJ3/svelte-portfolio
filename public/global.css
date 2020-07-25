@@ -46,6 +46,16 @@ h3 {
   font-size: 2rem;
 }
 
+@media only screen and (max-device-width: 480px) {
+  h1 {
+    font-size: 15vw;
+  }
+
+  h2 {
+    font-size: 9vw;
+  }
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
