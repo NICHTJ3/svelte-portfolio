@@ -3,11 +3,25 @@
 
   const experiences = [
     {
+      position: "Associate Engineer",
+      company: "Xero",
+      url: "https://xero.com/",
+      dateFrom: "February 2022",
+      dateEnd: "Current",
+    },
+    {
+      position: "Graduate Engineer",
+      company: "Xero",
+      url: "https://xero.com/",
+      dateFrom: "February 2021",
+      dateEnd: "February 2022",
+    },
+    {
       position: "Software tester / Intern",
       company: "Abacus Bio",
       url: "https://abacusbio.com/",
-      dateFrom: "dec 2019",
-      dateEnd: "febuary 2020",
+      dateFrom: "December 2019",
+      dateEnd: "February 2020",
     },
   ];
 </script>

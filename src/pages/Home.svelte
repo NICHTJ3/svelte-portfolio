@@ -1,11 +1,11 @@
 <script>
   import Section from "../components/Section.svelte";
 
-  const thingsILike = ["JavaScript", "Linux", "Vim", "Web"];
+  const thingsILike = ["Typescript", "Accessibility", "Web", "Vim"];
   const thingsIAmDoing = [
     {
-      position: "Student",
-      place: "Otago Polytechnic",
+      position: "Developer",
+      place: "Xero",
     },
   ];
   const socialPlatforms = [
